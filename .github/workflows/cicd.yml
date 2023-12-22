@@ -3,9 +3,9 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -22,7 +22,7 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_EY }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
 
     - name: Install dependencies and package Lambda
@@ -35,4 +35,4 @@ jobs:
       uses: appleboy/lambda-action@v0.0.4
       with:
         function_name: myLambda
-        zip_file: <test-dep-dev?.zip
+        zip_file: test-dep-dev.zip
