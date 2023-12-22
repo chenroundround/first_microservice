@@ -70,4 +70,4 @@ jobs:
             #name of my AWS Lambda Function
             function_name: <myLambda>
             #contains all the files in my github repository
-            zip_file: <myLambda>.zip
+            zip_file: <main.py>.zip
