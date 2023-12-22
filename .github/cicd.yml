@@ -1,3 +1,4 @@
+
 # This is a basic workflow to help you get started with Actions
 
 name: CI
@@ -68,6 +69,6 @@ jobs:
       uses: appleboy/lambda-action@v0.0.4
       with:
             #name of my AWS Lambda Function
-            function_name: <myLambda>
+            function_name: myLambda
             #contains all the files in my github repository
-            zip_file: <main.py>.zip
+            zip_file: test-dep-dev.zip
